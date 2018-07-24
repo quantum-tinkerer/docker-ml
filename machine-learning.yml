@@ -16,7 +16,7 @@ dependencies:
   - statsmodels
   - scikit-learn
   - theano
-  - tensor-flow
+  - tensorflow
   - keras
   - pytorch
   # NLP
