@@ -17,33 +17,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends --fix-missing \
         tig \
         htop \
         imagemagick \
-        inkscape \
         jq \
         keychain \
-        latexmk \
-        latexdiff \
         less \
         man \
         nano \
         rsync \
         screen \
         tmux \
-        biber \
-        texlive-bibtex-extra \
-        texlive-extra-utils \
-        texlive-fonts-extra \
-        texlive-fonts-recommended \
-        texlive-generic-recommended \
-        texlive-latex-base \
-        texlive-latex-extra \
-        texlive-latex-recommended \
-        texlive-publishers \
-        texlive-science \
-        texlive-xetex \
-        texlive-lang-cyrillic \
-        texlive-lang-european \
-        lmodern \
-        cm-super \
         vim \
         zsh \
         openssh-server \
