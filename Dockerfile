@@ -71,11 +71,11 @@ ENV OPENBLAS_NUM_THREADS=1\
     MKL_NUM_THREADS=1\
     CONDA_ALWAYS_COPY=true
 
-# Fix permissions (required when following the base image)
-RUN fix-permissions /opt/conda
-
 # Cleanup all downloaded conda files
 RUN conda clean --yes --all
+
+# Fix permissions (required when following the base image)
+RUN fix-permissions /opt/conda
 
 # copy startup.sh script and set start-up command
 COPY startup.sh /usr/local/bin
