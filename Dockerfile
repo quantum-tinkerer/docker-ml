@@ -47,7 +47,6 @@ RUN conda env update -n root -f /environments/machine-learning.yml
 RUN jupyter nbextension enable --py --sys-prefix ipyparallel && \
     jupyter nbextension enable --py --sys-prefix jupyter_cms && \
     jupyter nbextension enable --py --sys-prefix jupyter_dashboards && \
-    jupyter nbextension enable --py --sys-prefix nbserverproxy && \
     jupyter labextension install @jupyter-widgets/jupyterlab-manager \
             @jupyterlab/katex-extension \
             jupyterlab_bokeh @pyviz/jupyterlab_holoviews

@@ -28,5 +28,4 @@ NBApp.nbserver_extensions = {
   "jupyter_cms": True,
   "jupyter_dashboards": True,
   "ipyparallel.nbextension": True,
-  "nbserverproxy": True,
 }
