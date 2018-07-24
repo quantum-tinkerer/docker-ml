@@ -39,13 +39,10 @@ COPY profile.sh /etc/profile.d/
 
 # Add environment files
 RUN mkdir /environments
-COPY python3.yml dev.yml install_dev.sh /environments/
+COPY machine-learning.yml /environments/
 
 # Update the root environment
-RUN conda env update -n root -f /environments/python3.yml
-
-# Add a dev environment (e.g. with dev kwant and holoviews)
-# RUN conda env create -p /opt/conda/envs/dev -f /environments/dev.yml
+RUN conda env update -n root -f /environments/machine-learning.yml
 
 # Enable `jupyter nbextension`s
 RUN jupyter nbextension enable --py --sys-prefix ipyparallel && \
@@ -67,9 +64,7 @@ COPY git* /etc/
 
 # Create parallel profiles and copy the correct config
 RUN ipython profile create --parallel --profile python3 --ipython-dir /opt/conda/etc/ipython
-# RUN ipython profile create --parallel --profile dev --ipython-dir /opt/conda/etc/ipython
 COPY ipcluster_config_python3.py /opt/conda/etc/ipython/profile_python3/ipcluster_config.py
-# COPY ipcluster_config_dev.py /opt/conda/etc/ipython/profile_dev/ipcluster_config.py
 
 # setting openblas and mkl variables
 ENV OPENBLAS_NUM_THREADS=1\

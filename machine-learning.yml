@@ -1,4 +1,4 @@
-name: python3
+name: machine-learning
 channels:
   - conda-forge
 dependencies:
@@ -19,7 +19,7 @@ dependencies:
   - holoviews=1.10*
   - plotly
   - ipympl  # interactive plotting in jupyterlab
-  # parallell computing
+  # parallel computing
   - dill
   - distributed
   - hpc05
