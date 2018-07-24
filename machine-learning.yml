@@ -19,6 +19,9 @@ dependencies:
   - tensorflow
   - keras
   - pytorch
+  - pip:
+    # Not packaged for conda forge or pyPI
+    - git+https://github.com/drckf/paysage.git
   # NLP
   - spacy
   - nltk
