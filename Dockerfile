@@ -49,7 +49,7 @@ RUN jupyter nbextension enable --py --sys-prefix ipyparallel && \
     jupyter nbextension enable --py --sys-prefix jupyter_dashboards && \
     jupyter nbextension enable --py --sys-prefix nbserverproxy && \
     jupyter labextension install @jupyter-widgets/jupyterlab-manager \
-            @jupyterlab/katex-extension @jupyterlab/latex \
+            @jupyterlab/katex-extension \
             jupyterlab_bokeh @pyviz/jupyterlab_holoviews
 
 # prevent nb_conda_kernels from overriding our custom kernel manager
