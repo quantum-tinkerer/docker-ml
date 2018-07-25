@@ -40,8 +40,9 @@ COPY profile.sh /etc/profile.d/
 RUN mkdir /environments
 COPY machine-learning.yml /environments/
 
-# Update the root environment
-RUN conda env update -n root -f /environments/machine-learning.yml
+# Update the root environment and clean all downloaded conda files
+RUN conda env update -n root -f /environments/machine-learning.yml && \
+    conda clean --yes --all
 
 # Enable `jupyter nbextension`s
 RUN jupyter nbextension enable --py --sys-prefix ipyparallel && \
@@ -70,9 +71,6 @@ ENV OPENBLAS_NUM_THREADS=1\
     MKL_DYNAMIC=FALSE\
     MKL_NUM_THREADS=1\
     CONDA_ALWAYS_COPY=true
-
-# Cleanup all downloaded conda files
-RUN conda clean --yes --all
 
 # Fix permissions (required when following the base image)
 RUN fix-permissions /opt/conda
