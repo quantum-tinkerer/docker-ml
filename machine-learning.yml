@@ -12,10 +12,12 @@ dependencies:
   - pandas
   - statsmodels
   - scikit-learn
+  - xgboost
   - theano
   - tensorflow
   - keras
   - pytorch
+  - torchvision
   - pip:
     # Not packaged for conda forge or pyPI
     - git+https://github.com/drckf/paysage.git
