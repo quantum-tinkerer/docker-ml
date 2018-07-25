@@ -7,12 +7,10 @@ WORKDIR /
 RUN apt-get update && apt-get install -y --no-install-recommends --fix-missing \
         autossh \
         bash-completion \
-        build-essential \
         cron \
         tree \
         curl \
         dvipng \
-        gfortran \
         git \
         tig \
         htop \
