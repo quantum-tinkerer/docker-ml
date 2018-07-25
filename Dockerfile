@@ -7,10 +7,8 @@ WORKDIR /
 RUN apt-get update && apt-get install -y --no-install-recommends --fix-missing \
         autossh \
         bash-completion \
-        cron \
         tree \
         curl \
-        dvipng \
         git \
         tig \
         htop \
@@ -21,10 +19,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends --fix-missing \
         man \
         nano \
         rsync \
-        screen \
         tmux \
         vim \
-        zsh \
         openssh-server \
         apt-transport-https \
         gnupg \
