@@ -44,7 +44,8 @@ RUN jupyter nbextension enable --py --sys-prefix ipyparallel && \
     jupyter nbextension enable --py --sys-prefix jupyter_dashboards && \
     jupyter labextension install @jupyter-widgets/jupyterlab-manager \
             @jupyterlab/katex-extension \
-            jupyterlab_bokeh @pyviz/jupyterlab_holoviews
+            jupyterlab_bokeh @pyviz/jupyterlab_holoviews \
+            @jupyterlab/plotly-extension
 
 # prevent nb_conda_kernels from overriding our custom kernel manager
 RUN rm /opt/conda/etc/jupyter/jupyter_notebook_config.json
